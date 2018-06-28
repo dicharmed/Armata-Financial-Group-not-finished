@@ -1,0 +1,292 @@
+@import "bourbon"
+@import "_var.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+.title
+	position: relative
+	text-align: center
+		
+
+.section
+	position: relative
+	// padding-top: 80px
+	background-color: #f9f9f9
+	a  
+		&:hover
+			text-decoration: none	 
+	.section-title-lev-1
+		@extend .title
+		&::after
+			position: absolute
+			display: inline-block
+			content: ''
+			width: 165px
+			height: 4px
+			bottom: -30px
+			left: 50%
+			transform: translate(-50%,0)
+			background-color: $main-color		
+	.section__desc
+		margin-top: 60px
+		margin-bottom: 50px
+		a  
+			font-family: "RalewayBold", sans-serif
+
+	.section__context
+		position: relative
+		// min-height: 550px
+		padding-bottom: 30px
+
+	.section__triangle-bottom
+		position: absolute
+		width: 100%
+		height: 90px	
+		bottom: 0
+		background-image: url(img/s1_triangle.svg)
+		background-position: top 	
+		background-size: 100% 100%
+		text-align: center
+		z-index: 2
+		.section__logo
+			width: 116px
+			margin-top: 30px
+		.section__scales
+			position: absolute
+			width: 160px
+			top: -130px
+			left: 50%
+			transform: translate(-50%,0)
+			z-index: -1
+
+	.section__elements-bottom
+		padding: 15px 0 65px
+		background-color: #394b5f
+	.section__top
+		.section-title-lev-2
+		@extend .title
+	.section__bottom			
+		padding: 50px 0
+		background-color: #2C3949
+		a 
+			text-decoration: none
+	.section__bottom_gray-bg
+		background-color: #e4e4e4
+
+.section_white-fringe
+	&::before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 6px	
+		top: -5px				
+		background-image: url(img/bah_1.png) 
+.section_dark-fringe
+	&::before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 6px	
+		top: -5px				
+		background-image: url(img/bah_2.png) 
+.section_gray-fringe
+	&::before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 6px	
+		top: -5px				
+		background-image: url(img/bah_3.png) 
+
+.section_gray-bg
+	background-image: url(img/s1_gray_bg.png)
+	background-repeat: no-repeat
+	background-position: bottom
+	
+
+.item-info
+	position: relative
+	// padding-left: 35px
+	max-width: 265px
+	line-height: em(26px)
+	margin: 55px 0
+	&::after
+		content: ''
+		position: absolute
+		bottom: -25px
+		left: 0
+		background-color:  transparentize(#717272, 0.8)
+		width: 100%
+		height: 1px		
+	h4 
+		margin-top: 0
+		margin-bottom: 0	
+	a  
+		text-transform: none
+		letter-spacing: 1px
+	.item-desc
+		font-size: em(16px)
+		color: #000  
+		margin-top: 10px
+
+.item-info_up:nth-child(2)	
+	.item-info
+		margin-top: 0
+		
+
+.item-info_down:nth-child(2)
+	.item-info
+		margin-top: 90px
+
+.item-info_up:nth-child(8)
+	.item-info
+		position: absolute
+		top: 90px	
+
+
+
+.item-info_up:nth-child(6)
+	.item-info
+	position: relative
+	//left: 75px
+	//padding-left: 210px
+
+	
+.item-info_margin
+	padding-left: 60px
+
+.item-info_down
+	.item-info
+		margin-top: 0
+		.item-desc
+			color: #fff  
+
+.section-info_center
+	padding-left: 100px
+
+.section__items
+	padding-top: 70px
+	text-align: center
+	// min-width: 220px	
+	a  
+		color: transparentize(#111,0.5)
+	.img-wrap
+		position: relative
+		display: block		
+		margin-bottom: 40px
+		padding-bottom: 15px	
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: -20px
+			height: 2px
+			width: 55px
+			transform: translate(-50%,0)
+			background-color: $main-color	
+		img 			
+			max-height: 80px
+	.section__item-desc
+		color:#111
+		font-family: "PFCentroSlabProBold",sans-serif
+		font-size: em(15px)
+		letter-spacing: -1px
+		line-height: 0
+
+.section_2
+	.section__context
+		padding-bottom: 70px	
+
+.section_dark-bg
+	background: #2C3949 	
+	.section-title-lev-1, .section__desc, .item-desc
+		color: #fff 
+
+.section_dark-color
+	background: #2C3949 url(img/s3_sun_bg.png) no-repeat bottom
+
+.section_p-top
+	padding-top: 80px
+
+.section
+	.section__bottom-light
+		background-color: #394b5f
+
+.section_3
+	.section_p-top
+		padding-bottom: 70px
+		.item-info
+			&::after		
+				position: relative
+				bottom: 0								
+				height: 0	
+	.section__context
+		padding-bottom: 0
+		min-height: 850px
+	.img-wrap
+		width: 134px
+		height: 134px
+		text-align: center
+		background-color: $main-color
+		border-radius: 10em
+		margin-top: 100px
+		img 
+			width: 70px
+			margin-top: 30px
+			
+.section__pb
+	padding: 70px 0
+
+.allcards
+	text-align: center
+	.acard
+		display: inline-block
+		width: 260px
+		margin: 0 12px
+		padding: 55px 28px 52px
+		background-color: #2C3649
+		color: #97a4b2 
+		font-size: em(15px)
+		line-height: em(22px)
+
+			
+
+
+
+
+			
+	
+		
+
+
+
+
+
+
+
+
+
+//ALWAYS END
+@import "_media.sass"
+
